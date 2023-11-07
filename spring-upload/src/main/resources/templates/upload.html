@@ -1,0 +1,32 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en"-->
+	  <!--xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+	<!--<meta charset="UTF-8">-->
+	<!--<title>Google login demo</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div>-->
+	<!--<form th:action="@{/upload}" method="post">-->
+	<!--<input type="upload" value="upload"/>-->
+<!--</div>-->
+<!--<body>-->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Files Upload</title>
+</head>
+<body>
+<h2>Files Upload</h2>
+
+
+
+<form name='upload_files' enctype="multipart/form-data"
+	  th:action="@{/upload/files}" method='POST'>
+	Select Files: <input type="file" name="files" multiple="multiple" /> <br />
+	<br /> <input value="Upload" type="submit" />
+</form>
+
+<div th:if="${msg != null}" th:text="${msg}"></div>
+
+</body>
+</html>
